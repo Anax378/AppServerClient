@@ -73,4 +73,9 @@ public class JsonUtilities {
         if(data.get(name) instanceof JSONObject){return (JSONObject) data.get(name);}
         throw e;
     }
+    public static <E extends Exception> JSONObject extractJSONObjectFromJSONArray(JSONArray array, int index, E e) throws E {
+        if(index >= array.size() || index < 0){throw e;}
+        if(array.get(index) instanceof JSONObject){return (JSONObject) array.get(index);}
+        throw e;
+    }
 }
