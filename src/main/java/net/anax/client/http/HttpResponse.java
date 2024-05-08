@@ -7,10 +7,19 @@ public class HttpResponse {
     public String message;
     public int responseCode;
     HashMap<String, String> headers = new HashMap<>();
-
     HttpResponse(String message, int responseCode){
         this.message = message;
         this.responseCode = responseCode;
+    }
+
+    public void printSelf(){
+        System.out.println("status code: " + responseCode);
+        System.out.println("message: " + message);
+        System.out.println("headers:");
+        for(String key : headers.keySet()){
+            System.out.println("\t" + key + ": " + headers.get(key));
+        }
+        System.out.println("payload: " + payload);
     }
 
     public HttpResponse setPayload(String payload){

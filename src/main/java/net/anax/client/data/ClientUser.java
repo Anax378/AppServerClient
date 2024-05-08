@@ -47,7 +47,7 @@ public class ClientUser extends User{
         return token;
     }
     public Token getToken() throws RequestFailedException, HttpErrorStatusException {
-        if(cachedToken == null){
+        if(cachedToken == Token.EMPTY || cachedToken == null){
             cachedToken = requestToken();
         }
         if(autoRefreshToken){
@@ -180,7 +180,12 @@ public class ClientUser extends User{
         if(!(response.get("id") instanceof Long)){throw new RequestFailedException("response does not contain valid data");}
         int id = ((Long) response.get("id")).intValue();
 
-        return new ClientUser(id, remoteServer);
+        ClientUser user = new ClientUser(id, remoteServer);
+        user.cachedUsername = username;
+        user.cachedName = name;
+        user.password = password;
+
+        return user;
     }
     public JSONObject getJson(){
         JSONObject data = new JSONObject();

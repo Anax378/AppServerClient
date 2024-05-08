@@ -43,7 +43,7 @@ public class HttpRequest {
         if(payload != null && !payload.isEmpty()){
             connection.setDoOutput(true);
             OutputStream ostream = connection.getOutputStream();
-            ostream.write(payload.getBytes(StandardCharsets.UTF_8));
+            ostream.write(payload.getBytes(StandardCharsets.US_ASCII));
         }
 
         HttpResponse response = new HttpResponse(connection.getResponseMessage(), connection.getResponseCode());
@@ -64,7 +64,7 @@ public class HttpRequest {
             for(String value : headerField.get(header)){
                 headerValueBuilder.append(value).append("; ");
             }
-            headerValueBuilder.delete(headerValueBuilder.length()-3, headerValueBuilder.length()-1);
+            headerValueBuilder.delete(headerValueBuilder.length()-2, headerValueBuilder.length());
             response.addHeader(header, headerValueBuilder.toString());
             headerValueBuilder.setLength(0);
         }
