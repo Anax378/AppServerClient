@@ -1,5 +1,6 @@
 package net.anax.client.util;
 
+import net.anax.client.cryptography.KeyManager;
 import net.anax.client.data.RequestFailedException;
 import net.anax.client.http.*;
 import org.json.simple.JSONObject;
@@ -17,7 +18,9 @@ public class HttpUtilities {
             request.setPayload(data.toJSONString());
             request.addHeader(HttpHeader.Authorization, authToken);
 
-            HttpResponse response = request.send();
+            HttpWrapperRequest wrapperRequest = new HttpWrapperRequest(request, KeyManager.getINSTANCE().getAesKey(), KeyManager.getINSTANCE().getRSAPublicKey());
+            HttpResponse response = wrapperRequest.send();
+
             if(response.responseCode != 200){
                 throw new HttpErrorStatusException("did not receive 200 OK", response.responseCode, response.message);
             }

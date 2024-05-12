@@ -51,7 +51,7 @@ public class ClientUser extends User{
             cachedToken = requestToken();
         }
         if(autoRefreshToken){
-            if(cachedToken.expirationTimestamp >= System.currentTimeMillis()){
+            if(cachedToken.expirationTimestamp <= System.currentTimeMillis()){
                 cachedToken = requestToken();
             }
         }

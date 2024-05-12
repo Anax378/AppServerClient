@@ -1,6 +1,7 @@
 package net.anax;
 
 import net.anax.client.cryptography.KeyManager;
+import net.anax.client.data.ClientUser;
 import net.anax.client.data.RequestFailedException;
 import net.anax.client.http.*;
 import net.anax.client.server.RemoteServer;
@@ -20,15 +21,10 @@ public class Main {
         RemoteServer.getInstance().setUrl("http://localhost:8080");
 
         RemoteServer server = RemoteServer.getInstance();
-        KeyManager keyManager = new KeyManager();
 
-        HttpRequest request = new HttpRequest(new URL(server.getUrl()+"/user/login"), HttpMethod.POST);
-        request.setPayload("{\"username\":\"username\", \"password\":\"password\"}");
-        request.addHeader(HttpHeader.Authorization, "Bearer none");
-
-        HttpWrapperRequest wrapperRequest = new HttpWrapperRequest(request, keyManager.getAesKey(), keyManager.getRSAPublicKey());
-        HttpResponse response = wrapperRequest.send();
-        response.printSelf();
+        ClientUser user = ClientUser.login("username", "password", server);
+        user.requestUserInfo();
+        user.printSelf();
 
     }
 }

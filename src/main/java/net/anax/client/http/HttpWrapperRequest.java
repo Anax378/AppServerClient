@@ -19,10 +19,7 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
-import java.util.Base64;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class HttpWrapperRequest {
 
@@ -98,11 +95,14 @@ public class HttpWrapperRequest {
             connection.setRequestProperty("Connection", "redacted"); // does not work either
 
             OutputStream ostream = connection.getOutputStream();
+
+            System.out.println("beginning to write data: " + Arrays.toString(encryptedDataBase64.getBytes(StandardCharsets.US_ASCII)));
+
             ostream.write(encryptedDataBase64.getBytes(StandardCharsets.US_ASCII));
 
             connection.connect();
-
             HttpResponse response = new HttpResponse(connection.getResponseMessage(), connection.getResponseCode());
+
             BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
 
             String line;
