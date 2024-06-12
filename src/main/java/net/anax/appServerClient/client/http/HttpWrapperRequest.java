@@ -1,10 +1,10 @@
-package net.anax.client.http;
+package net.anax.appServerClient.client.http;
 
-import net.anax.client.cryptography.AESKey;
-import net.anax.client.cryptography.RSAPublicKey;
-import net.anax.client.data.RequestFailedException;
-import net.anax.client.util.JsonUtilities;
-import net.anax.client.util.StringUtilities;
+import net.anax.appServerClient.client.cryptography.AESKey;
+import net.anax.appServerClient.client.cryptography.RSAPublicKey;
+import net.anax.appServerClient.client.data.RequestFailedException;
+import net.anax.appServerClient.client.util.JsonUtilities;
+import net.anax.appServerClient.client.util.StringUtilities;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;

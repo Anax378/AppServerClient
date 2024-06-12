@@ -1,4 +1,4 @@
-package net.anax.client.http;
+package net.anax.appServerClient.client.http;
 
 public class HttpErrorStatusException extends Exception{
     int statusCode;

@@ -1,6 +1,6 @@
-package net.anax.client.data;
+package net.anax.appServerClient.client.data;
 
-import net.anax.client.util.JsonUtilities;
+import net.anax.appServerClient.client.util.JsonUtilities;
 import org.json.simple.JSONObject;
 
 public class TaskAssignment {

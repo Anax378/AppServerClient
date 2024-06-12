@@ -1,17 +1,12 @@
-package net.anax;
+package net.anax.appServerClient;
 
-import net.anax.client.cryptography.KeyManager;
-import net.anax.client.data.ClientUser;
-import net.anax.client.data.RequestFailedException;
-import net.anax.client.http.*;
-import net.anax.client.server.RemoteServer;
+import net.anax.appServerClient.client.data.ClientUser;
+import net.anax.appServerClient.client.data.RequestFailedException;
+import net.anax.appServerClient.client.http.*;
+import net.anax.appServerClient.client.server.RemoteServer;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.nio.charset.StandardCharsets;
-import java.security.Key;
 
 public class Main {
     public static void main(String[] args) throws RequestFailedException, HttpErrorStatusException, ParseException, IOException {

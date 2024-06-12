@@ -1,4 +1,4 @@
-package net.anax.client.cryptography;
+package net.anax.appServerClient.client.cryptography;
 
 import javax.crypto.spec.SecretKeySpec;
 import java.security.Key;

@@ -1,6 +1,4 @@
-package net.anax.client.data;
-
-import org.json.simple.JSONObject;
+package net.anax.appServerClient.client.data;
 
 public class RequestFailedException extends Exception{
     public static boolean doPrintStackTrace = false;

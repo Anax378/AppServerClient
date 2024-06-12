@@ -1,4 +1,4 @@
-package net.anax.client.cryptography;
+package net.anax.appServerClient.client.cryptography;
 
 import javax.crypto.KeyGenerator;
 import java.security.Key;

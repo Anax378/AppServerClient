@@ -1,4 +1,4 @@
-package net.anax.client.http;
+package net.anax.appServerClient.client.http;
 
 import java.io.*;
 import java.net.HttpURLConnection;

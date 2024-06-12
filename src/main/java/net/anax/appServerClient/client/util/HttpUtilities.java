@@ -1,8 +1,8 @@
-package net.anax.client.util;
+package net.anax.appServerClient.client.util;
 
-import net.anax.client.cryptography.KeyManager;
-import net.anax.client.data.RequestFailedException;
-import net.anax.client.http.*;
+import net.anax.appServerClient.client.cryptography.KeyManager;
+import net.anax.appServerClient.client.data.RequestFailedException;
+import net.anax.appServerClient.client.http.*;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;

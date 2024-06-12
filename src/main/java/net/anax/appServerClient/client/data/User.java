@@ -1,13 +1,11 @@
-package net.anax.client.data;
+package net.anax.appServerClient.client.data;
 
-import net.anax.client.http.HttpErrorStatusException;
-import net.anax.client.server.RemoteServer;
-import net.anax.client.server.Token;
-import net.anax.client.util.HttpUtilities;
-import net.anax.client.util.JsonUtilities;
+import net.anax.appServerClient.client.http.HttpErrorStatusException;
+import net.anax.appServerClient.client.server.RemoteServer;
+import net.anax.appServerClient.client.server.Token;
+import net.anax.appServerClient.client.util.HttpUtilities;
+import net.anax.appServerClient.client.util.JsonUtilities;
 import org.json.simple.JSONObject;
-
-import java.util.Arrays;
 
 public class User {
     RemoteServer remoteServer;

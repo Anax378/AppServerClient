@@ -1,4 +1,4 @@
-package net.anax.client.server;
+package net.anax.appServerClient.client.server;
 
 public class RemoteServer {
     private String url;

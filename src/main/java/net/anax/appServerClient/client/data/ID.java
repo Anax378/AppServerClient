@@ -1,4 +1,4 @@
-package net.anax.client.data;
+package net.anax.appServerClient.client.data;
 
 public enum ID {
     UNKNOWN(-2),

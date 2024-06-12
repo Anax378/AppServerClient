@@ -1,9 +1,9 @@
-package net.anax.client.server;
+package net.anax.appServerClient.client.server;
 
-import net.anax.client.data.ID;
-import net.anax.client.data.MissingDataException;
-import net.anax.client.util.JsonUtilities;
-import net.anax.client.util.StringUtilities;
+import net.anax.appServerClient.client.data.ID;
+import net.anax.appServerClient.client.data.MissingDataException;
+import net.anax.appServerClient.client.util.JsonUtilities;
+import net.anax.appServerClient.client.util.StringUtilities;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;

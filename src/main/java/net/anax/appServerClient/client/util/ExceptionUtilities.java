@@ -1,4 +1,4 @@
-package net.anax.client.util;
+package net.anax.appServerClient.client.util;
 
 public class ExceptionUtilities {
     public static <E extends Exception> E throwAgain(E e) throws E{

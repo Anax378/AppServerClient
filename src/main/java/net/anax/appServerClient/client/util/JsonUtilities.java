@@ -1,11 +1,7 @@
-package net.anax.client.util;
+package net.anax.appServerClient.client.util;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-
-import java.lang.reflect.Array;
-import java.lang.reflect.Field;
-import java.security.cert.Extension;
 
 public class JsonUtilities {
     public static boolean validateKeys(String[] keys, Class<?>[] dataTypes, JSONObject data){

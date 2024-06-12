@@ -1,4 +1,4 @@
-package net.anax.client.util;
+package net.anax.appServerClient.client.util;
 
 public class StringUtilities {
     public static boolean isInteger(String string){
